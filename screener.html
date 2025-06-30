@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Stock Screener</title>
+</head>
+<body>
+    <h2>Top 5 NSE Stocks with Lowest P/E Ratio</h2>
+
+    <table border="1" cellpadding="8" cellspacing="0">
+        <tr>
+            <th>Company</th>
+            <th>Symbol</th>
+            <th>Price (₹)</th>
+            <th>P/E Ratio</th>
+            <th>EPS</th>
+            <th>Sector</th>
+        </tr>
+        {% for row in results %}
+        <tr>
+            <td>{{ row.company }}</td>
+            <td>{{ row.symbol }}</td>
+            <td>{{ row.price }}</td>
+            <td>{{ row.pe }}</td>
+            <td>{{ row.eps }}</td>
+            <td>{{ row.sector }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+
+    <br>
+    <a href="/">← Back to Home</a>
+</body>
+</html>
